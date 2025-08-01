@@ -1,0 +1,98 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 认知地图样式 */
+.cognitive-map-container {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.cognitive-map-svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* 节点样式 */
+.node {
+  cursor: pointer;
+}
+
+.node circle {
+  transition: all 0.3s ease;
+}
+
+.node:hover circle {
+  r: 25;
+  stroke-width: 3;
+}
+
+/* 连线样式 */
+.edge {
+  cursor: pointer;
+}
+
+.edge line {
+  transition: all 0.3s ease;
+}
+
+.edge:hover line {
+  stroke-width: 3;
+  stroke: #ff4444;
+}
+
+/* 选中状态 */
+.edge.selected line {
+  stroke: #ff4444;
+  stroke-width: 3;
+}
+
+.node.selected circle {
+  fill: #ff4444;
+}
+
+/* 流程指示器样式 */
+.flow-progress {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .cognitive-map-container {
+    height: 300px;
+  }
+}
